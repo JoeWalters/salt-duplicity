@@ -6,10 +6,14 @@ Overview
 ========
 
 This is a Salt_ formula for making a server backup itself using
-duplicity_. Essentially it creates a ``custom_backup`` script which is
+duplicity_. This script has been modified from the original to 
+support multiple server configurations. This can be easily modified to
+for grains. Essentially it creates a ``custom_backup`` script which is
 similar to duplicity but which automatically passes several options to
 duplicity so that you don't need to specify them (backup location, gpg
-options, and so on). So, for example, to restore file
+options, and so on).
+
+So, for example, to restore file
 ``/one/two/three``::
 
     custom_backup restore --file-to-restore=one/two/three one/two/three
@@ -90,7 +94,7 @@ See ``pillar.example`` for an example.
 Meta
 ====
 
-Written by Antonis Christofides
+Written by Antonis Christofides: https://github.com/wikical/salt-duplicity
 
 | Copyright (C) 2011-2012 Vorgründungsgesellschaft GridMind Ivan Fernando Villanueva Barrio EU
 | Copyright (C) 2013 Ministry of Environment of Greece
