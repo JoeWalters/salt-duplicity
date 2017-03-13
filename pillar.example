@@ -48,6 +48,7 @@ duplicity:
       -----END PGP PRIVATE KEY BLOCK-----
     target: ssh://backuphost.com/var/backups/duplicity/{{ grains['fqdn'] }}
     target_pw: topsecret
+    target_user: jsmith
     full_if_older_than: 2M
     remove_older_than: 2Y
     remove_all_inc_of_but_n_full: 2
